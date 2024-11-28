@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Alarm Timer",
+  "version": "1.0",
+  "description": "Allow to define an alarm clock, and when the timer is done, a popup appears and an alarm rings.",
+  "permissions": ["alarms", "notifications", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Set Timer"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["alarm.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
